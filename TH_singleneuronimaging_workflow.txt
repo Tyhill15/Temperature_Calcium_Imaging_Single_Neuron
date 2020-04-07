@@ -1,0 +1,11 @@
+To image single neurons and analyze data, workflow is usually as follows
+
+1) Place Tiff file and temperature .txt and .txt.config.txt file in one folder, with same file name.
+
+2) Run "AnalyzeAWCGCaMP" or "FRETanalysis_100110", depending on whether fluorescent imaging is GCaMP or FRET-based.
+
+3) Those codes export .mat files, if baseline correction is needed run "baseline_correct_universal", if not then raw .mat file can be used.
+
+4) Pile up baseline corrected or uncorrected .mat files into one folder, for average trace run "display_avg_calcium_data". for Tstar, run "find_T_star_linear" or "find_T_star_oscillation", depending on temperature ramp used.
+
+5) Both scripts export a "T_star_numbers.mat" file, run "data_mean_sem_calc_T_star" for detailed information.
