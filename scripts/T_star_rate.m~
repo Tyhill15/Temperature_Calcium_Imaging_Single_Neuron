@@ -1,7 +1,0 @@
-time = 1:1440
-for i = 1:length-1
-    rate_per_min_N2 = (N2(i+1) - N2(i))/(time(i+1)-time(i));
-    rate_per_min_oy21 = (oy21(i+1) - oy21(i))/(time(i+1)-time(i));
-end
-plot(rate_per_min_N2, 'k', 'LineWidth', 2)
-plot(rate_per_min_oy21, 'r', 'LineWidth', 2)
