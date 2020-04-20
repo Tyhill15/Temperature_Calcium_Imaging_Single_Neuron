@@ -8,7 +8,7 @@ for x = 1:numel(files)
     load([dir_of_files '/' char(files(x))]);
     name = char(files(x));
     k = strfind(name, 'T_star_numbers');
-    amps = nanmean(total_fret_amps)';
+    amps = nanmean(total.amps)';
     data(b).geno = name(k+15:end-4);
     data(b).amps = amps;
     data(b).mean_amps = nanmean(amps);
