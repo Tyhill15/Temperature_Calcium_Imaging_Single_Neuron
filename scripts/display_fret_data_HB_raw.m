@@ -25,7 +25,7 @@ for i = 2:length(BLC)
     raw_deltafs = vertcat(raw_deltafs, raw_deltaf);
 end
 
-temps = BLC(1).temp
+temps = BLC(1).temp;
 for i = 2:length(BLC)
     temp = BLC(i).temp;
     temps = vertcat(temps, temp);
@@ -43,13 +43,13 @@ E1 = line( [(1:samples); (1:samples)], [(avgdeltafs - semdeltafs); (avgdeltafs +
 
 [AX,H1,H2] = plotyy(1:samples,avgdeltafs,1:samples,avgtemps);
 set(AX(1),'XLim',[0 samples ],'YLim',[-10 100], 'ytick',[(-10:10:100)], 'LineWidth', 2, 'FontSize', 13);
-set(AX(2),'XLim',[0 samples ],'YLim',[(min(avgtemps)-1) (max(avgtemps)+1)], 'ytick',[13:1:35],'LineWidth', 2, 'FontSize', 13);
+%set(AX(2),'XLim',[0 samples ],'YLim',[(min(avgtemps)-1) (max(avgtemps)+1)], 'ytick',[13:1:35],'LineWidth', 2, 'FontSize', 13);
 set(AX(1),'Box','off')
 set(H1, 'LineWidth', 2)
 set(H2, 'LineWidth', 2)
 
 set(AX,'FontSize',20)
-% H1 = plot(avgdeltafs);
+%H1 = plot(avgdeltafs);
 % set(H1, 'LineWidth', 2)
 
 
